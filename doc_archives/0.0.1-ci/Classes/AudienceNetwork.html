@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AudienceNetwork Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/AudienceNetwork" class="dashAnchor"></a>
+    <a title="AudienceNetwork Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">LinkedinAudienceNetwork 0.0.1-ci Docs</a> (83% documented)</p>
+        <p class="header-right"><a href="https://github.com/linkedin/audience-network-ios"><img src="../img/gh.png" alt="GitHub"/>View on GitHub</a></p>
+        <div class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">LinkedinAudienceNetwork Reference</a>
+        <img id="carat" src="../img/carat.png" alt=""/>
+        AudienceNetwork Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AudienceNetwork.html">AudienceNetwork</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AudienceNetworkConfiguration.html">AudienceNetworkConfiguration</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/LogVerbosityConfiguration.html">LogVerbosityConfiguration</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>AudienceNetwork</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">@objc(LinkedinAudienceNetwork)</span>
+<span class="kd">@objcMembers</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">AudienceNetwork</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@LinkedinAudienceNetwork@objc(cs)LinkedinAudienceNetwork(cpy)bidderToken"></a>
+                    <a name="//apple_ref/swift/Variable/bidderToken" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LinkedinAudienceNetwork@objc(cs)LinkedinAudienceNetwork(cpy)bidderToken">bidderToken</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The Bidder Token to be passed to Bid Requests sent to Linkedin via the OpenRTB spec.</p>
+
+<p>This token is available if it was previously cached or upon successful completion of the <code>start</code> method.
+It will be internally cached and immediately available in subsequent calls.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    If accessed before <code>start</code> this value will return an empty string.
+
+</div><div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    Do not cache this value, instead, access it whenever needed.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">bidderToken</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@LinkedinAudienceNetwork@objc(cs)LinkedinAudienceNetwork(cm)startWithKey:completion:"></a>
+                    <a name="//apple_ref/swift/Method/start(with:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LinkedinAudienceNetwork@objc(cs)LinkedinAudienceNetwork(cm)startWithKey:completion:">start(with:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes and starts the Audience Network SDK.</p>
+
+<p>The start process involves initialization, authentication with the key provided, and processing of required features.</p>
+<div class="aside aside-important">
+    <p class="aside-title">Important</p>
+    <p>The <code>completion</code> block may be called on a background queue</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc(startWithKey:completion:)</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">start</span><span class="p">(</span><span class="n">with</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The key required to start the Audience Network SDK.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code>completion</code> callback when the SDK finishes the start process, may be called on a background queue.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@LinkedinAudienceNetwork@objc(cs)LinkedinAudienceNetwork(cm)startWithConfiguration:completion:"></a>
+                    <a name="//apple_ref/swift/Method/start(with:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@LinkedinAudienceNetwork@objc(cs)LinkedinAudienceNetwork(cm)startWithConfiguration:completion:">start(with:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes and starts the Audience Network SDK.</p>
+
+<p>The start process involves initialization, authentication with the key provided, and processing of required features.</p>
+<div class="aside aside-important">
+    <p class="aside-title">Important</p>
+    <p>The <code>completion</code> block may be called on a background queue</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc(startWithConfiguration:completion:)</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">start</span><span class="p">(</span><span class="n">with</span> <span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Classes/AudienceNetworkConfiguration.html">AudienceNetworkConfiguration</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>configuration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The configuration for the Audience Network SDK.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code>completion</code> callback when the SDK finishes the start process, may be called on a background queue.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2022 <a class="link" href="https://business.linkedin.com/marketing-solutions/native-advertising/linkedin-audience-network" target="_blank" rel="external noopener">LinkedIn Marketing Identity Team</a>. All rights reserved. (Last updated: 2022-05-18)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>
