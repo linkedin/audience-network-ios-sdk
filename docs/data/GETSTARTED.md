@@ -37,7 +37,7 @@ AudienceNetwork.start(with: "some_key", completion: nil)
 AudienceNetwork.bidderToken
 ```
 ### Sample code: Objective-C
-```objective-c
+```objc
 @import LinkedinAudienceNetwork;
 
 ...
