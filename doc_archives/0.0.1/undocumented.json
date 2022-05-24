@@ -1,0 +1,19 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/runner/work/audience-network-ios/audience-network-ios/main/Modules/LinkedinAudienceNetwork/Public/AudienceNetwork.swift",
+      "line": 12,
+      "symbol": "AudienceNetwork",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/audience-network-ios/audience-network-ios/main/Modules/LinkedinAudienceNetwork/Public/LogVerbosityConfiguration.swift",
+      "line": 4,
+      "symbol": "LogVerbosityConfiguration",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/runner/work/audience-network-ios/audience-network-ios/main"
+}
