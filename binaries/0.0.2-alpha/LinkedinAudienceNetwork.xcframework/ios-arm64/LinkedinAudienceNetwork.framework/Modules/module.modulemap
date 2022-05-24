@@ -1,0 +1,11 @@
+framework module LinkedinAudienceNetwork {
+  umbrella header "LinkedinAudienceNetwork.h"
+
+  export *
+  module * { export * }
+}
+
+module LinkedinAudienceNetwork.Swift {
+    header "LinkedinAudienceNetwork-Swift.h"
+    requires objc
+}
