@@ -15,9 +15,9 @@ Provides privacy and brand-safe advertising solutions on LinkedIn's Audience Net
 We currently do not support Cocoapods, please follow manual integration steps below.
 
 ## Manual Integration
-1. Unzip the zip folder in finders. You should be able to see the LinkedinAudienceNetwork.xcframework folder.
+1. Unzip the zip folder in finders. Look for the LinkedinAudienceNetwork.xcframework folder.
 2. Open your own project in XCode
-3. Drag the LinkedinAudienceNetwork.xcframework, and drop it into the "Frameworks" module
+3. Drag the LinkedinAudienceNetwork.xcframework from finder, then drop it into the "Frameworks" module
 4. Embed and sign our SDK in project settings:
     1. Click on projects, go to **Targets**
     2. Select your target
@@ -34,26 +34,35 @@ The two main functions are:
 * AudienceNetwork.bidderToken
 
 ### AudienceNetwork.start
-This function contains 2 parameters: a key and a completion function.
+This async function contains 2 parameters: a key and a completion function. Bidder token is only ready from the completion block.
 
-**At this stage, you can put any string value in the key, and the completion is nullable.
 ### AudienceNetwork.bidderToken
-This function will return Linkedin's Bidder Token.
+This function will return LinkedIn's Bidder Token. 
+
+**It will return an empty string if the start has not finished. 
 
 ### Sample code: Swift
 ```swift
 import LinkedinAudienceNetwork
 
 ...
-AudienceNetwork.start(with: "some_key", completion: nil)
-AudienceNetwork.bidderToken
+AudienceNetwork.start(with: "some_key") { error in
+  ... Bidder token is ready from here...
+  
+  
+  _bidderToken = AudienceNetwork.bidderToken;
+}
 ```
 ### Sample code: Objective-C
 ```objc
 @import LinkedinAudienceNetwork;
 
 ...
-[LinkedinAudienceNetwork startWithKey:@"some_key" completion: nil];
-[LinkedinAudienceNetwork bidderToken];
+[LANAudienceNetwork startWithKey:@"some_key" completion: ^(NSError *error){
+  ... Bidder token is ready from here...
+  
+  
+  _bidderToken = [LANAudienceNetwork bidderToken];
+}];
 ```
 
