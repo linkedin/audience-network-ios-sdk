@@ -2,7 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased]
+
+## [0.0.2] - 2022-06-02T09:29:53Z
+- Add getSDKVersion function
 
 ## [0.0.1-ci] - 2022-05-18T19:27:24Z
 - Rename Public API LinkedinAudienceNetwork.groupIdentityToken -> LinkedinAudienceNetwork.bidderToken
