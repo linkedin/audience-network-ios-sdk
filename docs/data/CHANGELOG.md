@@ -2,9 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [Unreleased]
 
-## [0.0.2] - 2022-06-02T09:29:53Z
-- Add getSDKVersion function
+## [0.0.3] - 2022-08-16T23:03:17Z
+- Add Public API LinkedinAudienceNetwork.sdkVersion
 
 ## [0.0.1-ci] - 2022-05-18T19:27:24Z
 - Rename Public API LinkedinAudienceNetwork.groupIdentityToken -> LinkedinAudienceNetwork.bidderToken
@@ -20,6 +21,7 @@ All notable changes to this project will be documented in this file.
 - Add swiftformat to pre-commit hook
 - Add lints to pre-commit hook
 - Setup configs for xcoverage report and jazzy docs
+
 
 
 

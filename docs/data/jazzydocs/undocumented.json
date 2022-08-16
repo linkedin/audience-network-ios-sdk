@@ -2,7 +2,7 @@
   "warnings": [
     {
       "file": "/Users/runner/work/audience-network-ios/audience-network-ios/main/Modules/LinkedinAudienceNetwork/Public/AudienceNetwork.swift",
-      "line": 12,
+      "line": 13,
       "symbol": "AudienceNetwork",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
