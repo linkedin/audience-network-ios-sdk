@@ -1,3 +1,3 @@
-# [Integration Guide](https://solid-waffle-6e27f90f.pages.github.io/#getstarted)
+# [Integration Guide](https://linkedin.github.io/audience-network-ios-sdk)
 
 Visit the link above to get started.
