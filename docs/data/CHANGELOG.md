@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.1.0] - 2022-09-22T17:19:36Z
+- No-op ios 16.0 due to ios16 performance recession issue.
+
 ## [0.0.3] - 2022-08-16T23:03:17Z
 - Add Public API LinkedinAudienceNetwork.sdkVersion
 
@@ -21,6 +24,7 @@ All notable changes to this project will be documented in this file.
 - Add swiftformat to pre-commit hook
 - Add lints to pre-commit hook
 - Setup configs for xcoverage report and jazzy docs
+
 
 
 
