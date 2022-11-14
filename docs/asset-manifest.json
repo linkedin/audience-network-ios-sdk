@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.6ceda895.css",
-    "main.js": "/static/js/main.f1d2738b.js",
-    "static/js/787.6f347169.chunk.js": "/static/js/787.6f347169.chunk.js",
-    "index.html": "/index.html",
-    "main.6ceda895.css.map": "/static/css/main.6ceda895.css.map",
-    "main.f1d2738b.js.map": "/static/js/main.f1d2738b.js.map",
-    "787.6f347169.chunk.js.map": "/static/js/787.6f347169.chunk.js.map"
+    "main.css": "/audience-network-ios-sdk/static/css/main.6ceda895.css",
+    "main.js": "/audience-network-ios-sdk/static/js/main.5b5f72f2.js",
+    "static/js/787.6f347169.chunk.js": "/audience-network-ios-sdk/static/js/787.6f347169.chunk.js",
+    "index.html": "/audience-network-ios-sdk/index.html",
+    "main.6ceda895.css.map": "/audience-network-ios-sdk/static/css/main.6ceda895.css.map",
+    "main.5b5f72f2.js.map": "/audience-network-ios-sdk/static/js/main.5b5f72f2.js.map",
+    "787.6f347169.chunk.js.map": "/audience-network-ios-sdk/static/js/787.6f347169.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6ceda895.css",
-    "static/js/main.f1d2738b.js"
+    "static/js/main.5b5f72f2.js"
   ]
 }
