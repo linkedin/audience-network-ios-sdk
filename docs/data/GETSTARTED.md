@@ -25,7 +25,7 @@ The two main functions are:
 * AudienceNetwork.bidderToken
 
 ### AudienceNetwork.start
-This function contains 2 parameters: a key and a completion function. 
+This asynchronous function contains 2 parameters: a key and a completion function. 
 
 ** The key is currently distributed to select users.
 ### AudienceNetwork.bidderToken
@@ -36,7 +36,7 @@ This function will return LinkedIn's Bidder Token.
 import LinkedinAudienceNetwork
 
 ...
-AudienceNetwork.start(with: "some_key", completion: nil)
+AudienceNetwork.start(with: "your_key", completion: nil)
 AudienceNetwork.bidderToken
 ```
 ### Sample code: Objective-C
@@ -44,6 +44,6 @@ AudienceNetwork.bidderToken
 @import LinkedinAudienceNetwork;
 
 ...
-[LinkedinAudienceNetwork startWithKey:@"some_key" completion: nil];
-[LinkedinAudienceNetwork bidderToken];
+[LIAudienceNetwork startWithKey:@"your_key" completion: nil];
+[LIAudienceNetwork bidderToken];
 ```

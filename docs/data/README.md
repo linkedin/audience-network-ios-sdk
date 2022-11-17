@@ -12,10 +12,14 @@
 Provides privacy and brand-safe advertising solutions on LinkedIn's Audience Network for iOS.
 
 ## Cocoapods Integration
-We currently do not support Cocoapods, please follow manual integration steps below.
+1. Add the dependency to the target in Podfile
+```Ruby
+pod 'LinkedinAudienceNetwork'
+```
+2. Run `pod install --repo-update` to install the pod
 
 ## Manual Integration
-1. Unzip the zip folder in finders. You should be able to see the LinkedinAudienceNetwork.xcframework folder.
+1. Unzip the zip folder in finders. Find the `LinkedinAudienceNetwork.xcframework` under `LinkedinAudienceNetwork-{version}` directory.
 2. Open your own project in XCode
 3. Drag the LinkedinAudienceNetwork.xcframework, and drop it into the "Frameworks" module
 4. Embed and sign our SDK in project settings:
@@ -34,7 +38,7 @@ The two main functions are:
 * AudienceNetwork.bidderToken
 
 ### AudienceNetwork.start
-This function contains 2 parameters: a key and a completion function.
+This asynchronous function contains 2 parameters: a key and a completion function.
 
 **At this stage, you can put any string value in the key, and the completion is nullable.
 ### AudienceNetwork.bidderToken
@@ -45,7 +49,7 @@ This function will return Linkedin's Bidder Token.
 import LinkedinAudienceNetwork
 
 ...
-AudienceNetwork.start(with: "some_key", completion: nil)
+AudienceNetwork.start(with: "your_key", completion: nil)
 AudienceNetwork.bidderToken
 ```
 ### Sample code: Objective-C
@@ -53,7 +57,7 @@ AudienceNetwork.bidderToken
 @import LinkedinAudienceNetwork;
 
 ...
-[LinkedinAudienceNetwork startWithKey:@"some_key" completion: nil];
-[LinkedinAudienceNetwork bidderToken];
+[LIAudienceNetwork startWithKey:@"your_key" completion: nil];
+[LIAudienceNetwork bidderToken];
 ```
 
