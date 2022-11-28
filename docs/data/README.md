@@ -13,7 +13,7 @@ Provides privacy and brand-safe advertising solutions on LinkedIn's Audience Net
 
 ## Cocoapods Integration
 1. Add the dependency to the target in Podfile
-```Ruby
+```ruby
 pod 'LinkedinAudienceNetwork'
 ```
 2. Run `pod install --repo-update` to install the pod
