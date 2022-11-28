@@ -1,7 +1,7 @@
 # Integration Guide
 ## Cocoapods Integration
 1. Add the dependency to the target in Podfile
-```Ruby
+```ruby
 pod 'LinkedinAudienceNetwork'
 ```
 2. Run `pod install --repo-update` to install the pod
