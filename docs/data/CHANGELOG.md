@@ -1,6 +1,8 @@
 # Change Log
 
 All notable changes to this project will be documented in this file.
+## [1.1.3]
+- Fix memory access crash in SDK
 
 ## [1.1.0] - 2023-05-01T17:19:36Z
 - The SDK’s deployment target now supports iOS 9
