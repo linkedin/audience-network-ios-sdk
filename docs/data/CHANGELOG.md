@@ -1,9 +1,12 @@
 # Change Log
 
 All notable changes to this project will be documented in this file.
-## [1.1.3]
-- Fix memory access crash in SDK
+## [Unreleased]
 
+## [1.2.0] - 2023-11-07T20:35:19Z
+- The SDK’s minimum deployment target now set to iOS 11
+- Bitcode disabled
+  
 ## [1.1.0] - 2023-05-01T17:19:36Z
 - The SDK’s deployment target now supports iOS 9
 - The SDK now supports ArmV7 (still excluding i386)
@@ -13,5 +16,6 @@ All notable changes to this project will be documented in this file.
 
 ## [0.0.3] - 2022-08-16T23:03:17Z
 - Add Public API LinkedinAudienceNetwork.sdkVersion
+
 
 
