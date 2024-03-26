@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 ## [1.2.0] - 2023-11-07T20:35:19Z
 - The SDK’s minimum deployment target now set to iOS 11
 - Bitcode disabled
+- Crash fix
   
 ## [1.1.0] - 2023-05-01T17:19:36Z
 - The SDK’s deployment target now supports iOS 9
