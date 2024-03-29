@@ -1,7 +1,7 @@
 # Change Log
 
 All notable changes to this project will be documented in this file.
-## [1.2.1] - 2024-03-28T10:01:17Z
+## [1.2.1] - 2024-03-28T22:01:17Z
 - Removed unused code
 
 ## [1.2.0] - 2023-11-07T20:35:19Z
