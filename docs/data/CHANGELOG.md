@@ -1,8 +1,6 @@
 # Change Log
 
 All notable changes to this project will be documented in this file.
-## [Unreleased]
-
 ## [1.2.2] - 2024-04-10T18:10:33Z
 - Added privacy manifest
 
