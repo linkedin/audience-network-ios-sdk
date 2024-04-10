@@ -1,6 +1,11 @@
 # Change Log
 
 All notable changes to this project will be documented in this file.
+## [Unreleased]
+
+## [1.2.2] - 2024-04-10T18:10:33Z
+- Added privacy manifest
+
 ## [1.2.1] - 2024-03-28T22:01:17Z
 - Removed unused code
 
@@ -18,6 +23,7 @@ All notable changes to this project will be documented in this file.
 
 ## [0.0.3] - 2022-08-16T23:03:17Z
 - Add Public API LinkedinAudienceNetwork.sdkVersion
+
 
 
 
