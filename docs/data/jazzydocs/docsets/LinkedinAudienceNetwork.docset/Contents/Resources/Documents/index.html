@@ -16,7 +16,7 @@
     <a title="LinkedinAudienceNetwork  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">LinkedinAudienceNetwork 1.2.3-test Docs</a> (91% documented)</p>
+        <p><a href="index.html">LinkedinAudienceNetwork 1.2.2 Docs</a> (93% documented)</p>
         <p class="header-right"><a href="https://github.com/linkedin/audience-network-ios"><img src="img/gh.png" alt="GitHub"/>View on GitHub</a></p>
         <div class="header-right">
           <form role="search" action="search.json">
@@ -27,7 +27,9 @@
     </header>
     <div class="content-wrapper">
       <p id="breadcrumbs">
-        <a href="index.html">LinkedinAudienceNetwork</a>
+        <a href="index.html">LinkedinAudienceNetwork Reference</a>
+        <img id="carat" src="img/carat.png" alt=""/>
+        LinkedinAudienceNetwork  Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -42,9 +44,6 @@
               <li class="nav-group-task">
                 <a href="Classes/AudienceNetworkConfiguration.html">AudienceNetworkConfiguration</a>
               </li>
-              <li class="nav-group-task">
-                <a href="Classes/AudienceNetworkMediator.html">AudienceNetworkMediator</a>
-              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -55,14 +54,6 @@
               </li>
             </ul>
           </li>
-          <li class="nav-group-name">
-            <a href="Protocols.html">Protocols</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Protocols/LogDelegateProtocol.html">LogDelegateProtocol</a>
-              </li>
-            </ul>
-          </li>
         </ul>
       </nav>
       <article class="main-content">
@@ -70,33 +61,71 @@
           <section class="section">
             
             <h1 id='linkedin-audience-network-ios-sdk' class='heading'>Linkedin Audience Network iOS SDK</h1>
-<h2 id='1st-party-release-voyager' class='heading'>1st Party Release (Voyager)</h2>
+
+<p>Provides privacy and brand-safe advertising solutions on LinkedIn&rsquo;s Audience Network for iOS.</p>
+<h2 id='cocoapods-integration' class='heading'>Cocoapods Integration</h2>
 
 <ol>
-<li><a href="https://github.com/linkedin-multiproduct/LinkedinAudienceNetworkInternal/blob/279c699854ec8e26f674b7cac82b2c00c6d541b3/Modules/_LinkedinAudienceNetworkCoreInternal/AutomatedConstants.swift#L12">Check the last release version</a> to determine the next release version desired.</li>
-<li>In terminal go to <code>audience-network-ios</code> and run <code>fastlane ios first_party_release version:*.*.*</code></li>
-<li><a href="https://github.com/linkedin-multiproduct/LinkedinAudienceNetworkInternal">Publish Pull Request, Get Reviews, &amp; Merge</a></li>
-<li>Get the new <strong>MP Version</strong> published from the post-merge job on your pull request</li>
-<li>Update Voyager&rsquo;s Podfile to bump <code>LinkedinAudienceNetworkInternal</code> to the new <strong>MP Version</strong></li>
+<li>Add the dependency to the target in Podfile
+<code>ruby
+pod &#39;LinkedinAudienceNetwork&#39;
+</code></li>
+<li>Run <code>pod install --repo-update</code> to install the pod</li>
 </ol>
-<h3 id='note-1st-party-release-has-two-version-definitions' class='heading'>Note: 1st Party Release has two version definitions</h3>
+<h2 id='manual-integration' class='heading'>Manual Integration</h2>
+
+<ol>
+<li>Unzip the zip folder in finders. Find the <code>LinkedinAudienceNetwork.xcframework</code> under <code>LinkedinAudienceNetwork-{version}</code> directory.</li>
+<li>Open your own project in XCode</li>
+<li>Drag the LinkedinAudienceNetwork.xcframework, and drop it into the &ldquo;Frameworks&rdquo; module</li>
+<li>Embed and sign our SDK in project settings:
+
+<ol>
+<li>Click on projects, go to <strong>Targets</strong></li>
+<li>Select your target</li>
+<li>Select <strong>General</strong> tab</li>
+<li>Find <strong>Frameworks, Libraries and Embedded content</strong> section</li>
+<li>Find our SDK <strong>LinkedinAudienceNetwork.xcframework</strong></li>
+<li>Select <strong>Embed and Sign</strong></li>
+</ol></li>
+</ol>
+<h2 id='use-the-code' class='heading'>Use the code</h2>
+
+<p>We use singleton to maintain a client, so you don&rsquo;t have to create an object to store a client.
+The two main functions are:</p>
 
 <ul>
-<li><em>MP Version</em>: The version of that is automatically managed by the MP and updated when merging a pull request in LinkedinAudienceNetworkInternal - This is what Voyager&rsquo;s podfile references</li>
-<li><em>SDK Version</em>: The version defined in <code>fastlane ios first_party_release version:*.*.*</code> which is used by telemetry to identify clients with a specific version</li>
+<li>AudienceNetwork.start</li>
+<li>AudienceNetwork.bidderToken</li>
 </ul>
-<h2 id='3rd-party-release' class='heading'>3rd Party Release</h2>
+<h3 id='audiencenetwork-start' class='heading'>AudienceNetwork.start</h3>
 
-<ol>
-<li><a href="https://github.com/linkedin/audience-network-ios/blob/main/LinkedinAudienceNetwork.podspec">Check the last released version</a> to determine the next release version</li>
-<li><a href="https://github.com/linkedin/audience-network-ios/actions/workflows/3P-public-release.yml">Run Workflow with desired release version</a></li>
-</ol>
+<p>This asynchronous function contains 2 parameters: a key and a completion function.</p>
+
+<p>**At this stage, you can put any string value in the key, and the completion is nullable.</p>
+<h3 id='audiencenetwork-biddertoken' class='heading'>AudienceNetwork.bidderToken</h3>
+
+<p>This function will return Linkedin&rsquo;s Bidder Token.</p>
+<h3 id='sample-code-swift' class='heading'>Sample code: Swift</h3>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">LinkedinAudienceNetwork</span>
+
+<span class="o">...</span>
+<span class="kt">AudienceNetwork</span><span class="o">.</span><span class="nf">start</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="s">"your_key"</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+<span class="kt">AudienceNetwork</span><span class="o">.</span><span class="n">bidderToken</span>
+</code></pre>
+<h3 id='sample-code-objective-c' class='heading'>Sample code: Objective-C</h3>
+<pre class="highlight objective_c"><code><span class="k">@import</span> <span class="n">LinkedinAudienceNetwork</span><span class="p">;</span>
+
+<span class="p">...</span>
+<span class="p">[</span><span class="n">LIAudienceNetwork</span> <span class="nf">startWithKey</span><span class="p">:</span><span class="s">@"your_key"</span> <span class="nf">completion</span><span class="p">:</span> <span class="nb">nil</span><span class="p">];</span>
+<span class="p">[</span><span class="n">LIAudienceNetwork</span> <span class="nf">bidderToken</span><span class="p">];</span>
+</code></pre>
 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2024 <a class="link" href="https://www.linkedin.com/help/lms/answer/a1311400" target="_blank" rel="external noopener">LinkedIn Marketing Identity Team</a>. All rights reserved. (Last updated: 2024-05-15)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.15.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+          <p>&copy; 2024 <a class="link" href="https://www.linkedin.com/help/lms/answer/a1311400" target="_blank" rel="external noopener">LinkedIn Marketing Identity Team</a>. All rights reserved. (Last updated: 2024-04-10)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>
     </div>
