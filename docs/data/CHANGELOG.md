@@ -1,10 +1,11 @@
 # Change Log
 
 All notable changes to this project will be documented in this file.
-## [Unreleased]
+## [1.2.2] - 2024-04-10T18:10:33Z
+- Added privacy manifest
 
-## [1.2.0-TEST] - 2024-03-19T17:27:37Z
-- Mediators can now share contextual info about their SDK environment via AudienceNetworkConfiguration.mediator.
+## [1.2.1] - 2024-03-28T22:01:17Z
+- Removed unused code
 
 ## [1.2.0] - 2023-11-07T20:35:19Z
 - The SDK’s minimum deployment target now set to iOS 11
